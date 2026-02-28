@@ -111,24 +111,28 @@ const InternalBannerSlider = ({ ads }) => {
 // --- 3. Premium Features ---
 const PremiumFeatures = () => {
   const features = [
-    { icon: Shield, title: "Secure Payment", desc: "SSL Encrypted" },
-    { icon: Truck, title: "Free Shipping", desc: "Orders over 5k" },
-    { icon: Zap, title: "Fast Delivery", desc: "1-2 Days" },
-    { icon: Gift, title: "Gift Cards", desc: "Perfect Gifting" },
-    { icon: Award, title: "Quality Assured", desc: "Premium Only" },
-    { icon: Clock, title: "24/7 Support", desc: "Always Here" },
+     { icon: Clock, title: "Customer Support", desc: "24 x 7 email or Super Chat" },
+     { icon: Award, title: "Quality Assured", desc: "Quality Premium Products " },
+     
+     { icon: Truck, title: "Free Shipping", desc: "Orders Over Rs.3000.00" },
+    { icon: Shield, title: "Secure Payment", desc: "We Ensure Secure Payment" },
+    
+    
+    { icon: Gift, title: "Gift Cards", desc: "For Happy Moments" },
+    
+   ,
   ];
 
   return (
-    <div className="py-16 bg-white border-b border-slate-50">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-4">
+    <div className="py-16 bg-white border-b border-slate-50 justify-center  items-center   ">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-4">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center p-6 rounded-[2rem] bg-slate-50/50 hover:bg-white hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 border border-transparent hover:border-blue-50">
-            <div className="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center mb-4 shadow-xl">
+            <div className="w-12 h-12 rounded-2xl bg-[#2E2DAD] flex items-center justify-center mb-4 shadow-xl">
               <feature.icon className="w-5 h-5 text-white" />
             </div>
-            <h3 className="font-black text-slate-900 text-[10px] uppercase tracking-widest">{feature.title}</h3>
-            <p className="text-[10px] text-slate-400 font-bold uppercase mt-1 text-center">{feature.desc}</p>
+            <h3 className="font-black text-slate-900 text-xl ">{feature.title}</h3>
+            <p className="text-sm text-slate-400 font-bold  mt-1 text-center">{feature.desc}</p>
           </div>
         ))}
       </div>
@@ -195,8 +199,10 @@ export default function HomeContainer() {
       <div className="bg-slate-950 py-3.5">
         <NewAdsTitles speed={35}>
           <div className="flex text-white font-black text-[10px] uppercase tracking-[0.3em]">
-            <span className="mx-12 flex items-center gap-2"><Sparkles size={12} className="text-blue-400"/> New Arrivals Available Now</span>
-            <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/> Premium Curation 2026</span>
+            <span className="mx-12 flex items-center gap-2"><Sparkles size={12} className="text-blue-400"/> NEW MONITORS IN STOCK NOW</span>
+            <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/>PREMIUM COLLECTION UPDATED</span>
+             <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/>NEW YEAR OFFER COMING SOON</span>
+             <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/>10% OFF NOW ONLINE PAYMENTS</span>
           </div>
         </NewAdsTitles>
       </div>

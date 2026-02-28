@@ -112,38 +112,38 @@ export default function Navbar() {
   const profileImgSrc = user?.profileImage || user?.picture || DEFAULT_IMAGE;
 
   const navLinkClass = (path) => `
-    relative text-[14px] font-medium transition-all duration-300 px-3 py-2 rounded-lg
-    ${location.pathname === path ? "text-blue-600 bg-blue-50/50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"}
+    relative text-[14px] font-medium transition-all duration-300 px-3 py-2 rounded-lg text-white
+    ${location.pathname === path ? "text-white bg-blue-50/50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"}
   `;
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-100 py-2.5" : "bg-white py-4"}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-[#3ead2d] backdrop-blur-md shadow-sm border-b border-slate-100 py-2.5" : "bg-[#2E2DAD] py-4"}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform">M</div>
-          <span className="text-xl font-black tracking-tight text-slate-800">MY<span className="text-blue-600">BRAND</span></span>
+          <div className="w-9 h-9 bg-[#2E2DAD] rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform">M</div>
+          <span className="text-xl font-black tracking-tight text-white">OneGadget</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-2">
-          <div className="flex items-center gap-1 mr-4">
+        <div className="hidden md:flex items-center gap-2 ">
+          <div className="flex items-center gap-1 mr-4 ">
             <Link to="/" className={navLinkClass("/")}>Home</Link>
             <Link to="/about" className={navLinkClass("/about")}>About</Link>
             <Link to="/service" className={navLinkClass("/service")}>Services</Link>
             <Link to="/contact" className={navLinkClass("/contact")}>Contact</Link>
           </div>
 
-          <div className="h-5 w-[1px] bg-slate-200 mx-2" />
+          
 
           <div className="flex items-center gap-3">
             {user && (
               <div className="flex items-center gap-1">
-                <Link title="Cart" to="/viewcart" className="p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all relative">
+                <Link title="Cart" to="/viewcart" className="p-2 text-white hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all relative">
                   <ShoppingCart size={20} />
                 </Link>
 
-                <Link title="Orders" to="/orders" onClick={handleMarkAsSeen} className="p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all relative">
+                <Link title="Orders" to="/orders" onClick={handleMarkAsSeen} className="p-2 text-white hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all relative">
                   <Package size={20} />
                   {hasUpdates && (
                     <span className="absolute top-1.5 right-1.5 flex h-2.5 w-2.5">
@@ -169,7 +169,7 @@ export default function Navbar() {
                   <img src={profileImgSrc} className="w-8 h-8 rounded-full object-cover border border-white shadow-sm" alt="profile" onError={(e) => { e.target.src = DEFAULT_IMAGE; }} />
                   <span className="text-sm font-semibold text-slate-700 hidden lg:block">{user.name?.split(" ")[0]}</span>
                 </Link>
-                <button onClick={handleLogout} title="Logout" className="p-2 text-slate-400 hover:text-rose-500 hover:bg-rose-50 rounded-xl transition-all">
+                <button onClick={handleLogout} title="Logout" className="p-2 text-white hover:text-rose-500 hover:bg-rose-50 rounded-xl transition-all">
                   <LogOut size={18} />
                 </button>
               </div>
