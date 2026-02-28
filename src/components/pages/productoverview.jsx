@@ -71,33 +71,37 @@ export default function ProductOverview() {
     const finalTotal = subtotal + DELIVERY_FEE;
 
     Swal.fire({
-      title: `<span class="text-xl font-black uppercase tracking-tight text-slate-900">Order Preview</span>`,
+      title: `<span class="text-xl font-black uppercase tracking-tight text-black">Order Preview</span>
+      <div class="border-t border border-black "></div>`,
       html: `
+      
         <div class="mt-4 text-left font-sans">
-          <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-2xl border border-slate-100 mb-4">
+          <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl border border-slate-100 mb-4">
             <img src="${product.product.images?.[0]}" class="w-16 h-16 rounded-xl object-cover border border-white shadow-sm" />
             <div class="flex-1 min-w-0">
-              <p class="text-xs font-black text-slate-900 truncate">${product.product.productName}</p>
+              <p class="text-base font-black text-slate-900 truncate">${product.product.productName}</p>
               <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wide">Qty: ${quantity} units</p>
             </div>
           </div>
 
           <div class="space-y-2 px-1">
             <div class="flex justify-between items-center text-sm">
-              <span class="text-slate-500 font-medium italic text-xs">Items Subtotal</span>
+              <span class="text-black font-medium  text-base">Items Subtotal</span>
               <span class="font-bold text-slate-900">Rs. ${subtotal.toLocaleString()}</span>
             </div>
             <div class="flex justify-between items-center text-sm">
-              <span class="text-slate-500 font-medium italic text-xs">Standard Delivery</span>
+              <span class="text-black font-medium  text-base">Standard Delivery</span>
               <span class="font-bold text-blue-600">+ Rs. ${DELIVERY_FEE.toLocaleString()}</span>
             </div>
+
+            
             
             <div class="border-t border-dashed border-slate-300 my-3"></div>
             
             <div class="flex justify-between items-center">
               <div>
-                <span class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Total Payable</span>
-                <span class="text-2xl font-black text-slate-900">Rs. ${finalTotal.toLocaleString()}</span>
+                <span class="block text-base font-black text-black   mb-1">Total Payable</span>
+                <span class="text-2xl font-black text-[#2E2DAD]">Rs. ${finalTotal.toLocaleString()}</span>
               </div>
               <div class="bg-emerald-100 text-emerald-700 p-2.5 rounded-2xl">
                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
@@ -107,16 +111,17 @@ export default function ProductOverview() {
         </div>
       `,
       showCancelButton: true,
-      confirmButtonText: "Secure Checkout",
+      confirmButtonText: "Place Order",
       cancelButtonText: "Maybe Later",
       confirmButtonColor: "#0f172a",
       cancelButtonColor: "#ffffff", // Changed to White to use custom text color via CSS
       customClass: {
         popup: "rounded-[2.5rem] border-none shadow-2xl",
+        actions: "flex justify-center gap-7",
         confirmButton:
-          "rounded-2xl px-8 py-4 font-black uppercase text-[11px] tracking-widest shadow-xl shadow-slate-200 order-2",
+          "rounded-lg px-5 py-3   text-white   order-2 bg-[#2E2DAD] ",
         cancelButton:
-          "rounded-2xl px-8 py-4 font-black uppercase text-[11px] tracking-widest text-slate-400 border border-slate-200 hover:text-slate-600 order-1",
+          " ml-2 rounded-lg px-5 py-3    text-black border border-slate-200 hover:text-slate-600 order-1 bg-[#D9D9D9]",
       },
       buttonsStyling: false, // Set to false to allow Tailwind classes in customClass to work fully
     }).then((result) => {
