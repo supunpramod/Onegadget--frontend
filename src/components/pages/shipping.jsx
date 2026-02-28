@@ -92,7 +92,7 @@ export default function Shipping() {
         {/* Header Section */}
         <div className="pt-10 px-10 pb-6 text-center">
           <div className="flex justify-center mb-4">
-            <div className="bg-blue-600 p-3 rounded-2xl shadow-lg shadow-blue-200">
+            <div className="bg-[#2E2DAD] p-3 rounded-2xl shadow-lg shadow-blue-200">
                <Truck className="text-white w-6 h-6" />
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Shipping() {
               <div className="p-6 bg-gray-50 rounded-[2rem] border border-gray-100 space-y-5">
                 <div className="flex gap-4">
                   <div className="mt-1 bg-white p-2 rounded-lg shadow-sm h-fit">
-                    <MapPin size={18} className="text-blue-500" />
+                    <MapPin size={18} className="text-[#2E2DAD]" />
                   </div>
                   <div>
                     <p className="text-[10px] uppercase text-gray-400 font-black tracking-widest mb-1">Address</p>
@@ -136,7 +136,7 @@ export default function Shipping() {
                 
                 <div className="flex gap-4">
                   <div className="mt-1 bg-white p-2 rounded-lg shadow-sm h-fit">
-                    <Phone size={18} className="text-blue-500" />
+                    <Phone size={18} className="text-[#2E2DAD]" />
                   </div>
                   <div>
                     <p className="text-[10px] uppercase text-gray-400 font-black tracking-widest mb-1">Contact</p>
@@ -202,7 +202,7 @@ export default function Shipping() {
             className={`group w-full py-5 rounded-[1.5rem] font-black text-lg transition-all transform active:scale-95 flex items-center justify-center gap-3 ${
               !shippingInfo.address || !shippingInfo.phone
                 ? "bg-gray-100 text-gray-300 cursor-not-allowed"
-                : "bg-blue-600 text-white hover:bg-blue-700 shadow-[0_15px_30px_rgba(37,99,235,0.3)]"
+                : "bg-[#2E2DAD] text-white hover:bg-blue-700 shadow-[0_15px_30px_rgba(37,99,235,0.3)]"
             }`}
           >
             Confirm & Continue
