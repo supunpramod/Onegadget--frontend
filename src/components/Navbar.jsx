@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import NotificationsDropdown from "@/components/utils/notificationDrop";
+import Mainlogo from "@/assets/Logo One Gadget White-01.png";
 
 export default function Navbar() {
   const [user, setUser] = useState(null);
@@ -112,8 +113,8 @@ export default function Navbar() {
   const profileImgSrc = user?.profileImage || user?.picture || DEFAULT_IMAGE;
 
   const navLinkClass = (path) => `
-    relative text-[14px] font-medium transition-all duration-300 px-3 py-2 rounded-lg text-white
-    ${location.pathname === path ? "text-white bg-blue-50/50" : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"}
+    relative text-base font-medium transition-all duration-300 px-3 py-2 rounded-lg text-white
+    ${location.pathname === path ? "text-white " : "text-slate-600 hover:text-black hover:bg-slate-50 "} "}
   `;
 
   return (
@@ -121,8 +122,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 bg-[#2E2DAD] rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform">M</div>
-          <span className="text-xl font-black tracking-tight text-white">OneGadget</span>
+          
+          <img src={Mainlogo} alt="OneGadget Logo" className="w-38 h-10 object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -140,11 +141,11 @@ export default function Navbar() {
             {user && (
               <div className="flex items-center gap-1">
                 <Link title="Cart" to="/viewcart" className="p-2 text-white hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all relative">
-                  <ShoppingCart size={20} />
+                  <ShoppingCart size={25} />
                 </Link>
 
                 <Link title="Orders" to="/orders" onClick={handleMarkAsSeen} className="p-2 text-white hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all relative">
-                  <Package size={20} />
+                  <Package size={25} />
                   {hasUpdates && (
                     <span className="absolute top-1.5 right-1.5 flex h-2.5 w-2.5">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -159,18 +160,18 @@ export default function Navbar() {
 
             {isAdmin && (
               <Link to="/admin/dashboard" className="bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-semibold hover:bg-blue-600 transition-all shadow-sm flex items-center gap-2">
-                <LayoutDashboard size={14} /> Dashboard
+                <LayoutDashboard size={25} /> Dashboard
               </Link>
             )}
 
             {user ? (
               <div className="flex items-center gap-2 ml-2">
-                <Link to={`/profile?userId=${userId}`} className="flex items-center gap-3 p-1 pr-3 rounded-full border border-slate-100 hover:border-blue-400 transition-all bg-slate-50/50">
-                  <img src={profileImgSrc} className="w-8 h-8 rounded-full object-cover border border-white shadow-sm" alt="profile" onError={(e) => { e.target.src = DEFAULT_IMAGE; }} />
-                  <span className="text-sm font-semibold text-slate-700 hidden lg:block">{user.name?.split(" ")[0]}</span>
+                <Link to={`/profile?userId=${userId}`} className="flex items-center gap-3 p-1 pr-3 rounded-full  hover:border-blue-400 transition-all bg-transparent ">
+                  <img src={profileImgSrc} className="w-8 h-8 rounded-full object-cover  shadow-sm" alt="profile" onError={(e) => { e.target.src = DEFAULT_IMAGE; }} />
+                  <span className="text-base font-semibold text-white hidden lg:block">{user.name?.split(" ")[0]}</span>
                 </Link>
                 <button onClick={handleLogout} title="Logout" className="p-2 text-white hover:text-rose-500 hover:bg-rose-50 rounded-xl transition-all">
-                  <LogOut size={18} />
+                  <LogOut size={25} />
                 </button>
               </div>
             ) : (
