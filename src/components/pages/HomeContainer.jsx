@@ -194,15 +194,15 @@ export default function HomeContainer() {
   );
 
   return (
-    <div className="w-full bg-white min-h-screen">
+    <div className="w-full bg-white min-h-screen ">
       {/* Promo Ticker */}
-      <div className="bg-slate-950 py-3.5">
+      <div className="bg-slate-950 py-5 mt-2 ">
         <NewAdsTitles speed={35}>
-          <div className="flex text-white font-black text-[10px] uppercase tracking-[0.3em]">
-            <span className="mx-12 flex items-center gap-2"><Sparkles size={12} className="text-blue-400"/> NEW MONITORS IN STOCK NOW</span>
-            <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/>PREMIUM COLLECTION UPDATED</span>
-             <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/>NEW YEAR OFFER COMING SOON</span>
-             <span className="mx-12 flex items-center gap-2"><Star size={12} className="text-blue-400"/>10% OFF NOW ONLINE PAYMENTS</span>
+          <div className="flex text-white font-black text-sm uppercase tracking-[0.3em]">
+            <span className="mx-12 flex items-center gap-2"> NEW MONITORS IN STOCK NOW</span>
+            <span className="mx-12 flex items-center gap-2">PREMIUM COLLECTION UPDATED</span>
+             <span className="mx-12 flex items-center gap-2">NEW YEAR OFFER COMING SOON</span>
+             <span className="mx-12 flex items-center gap-2">10% OFF NOW ONLINE PAYMENTS</span>
           </div>
         </NewAdsTitles>
       </div>

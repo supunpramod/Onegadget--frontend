@@ -123,7 +123,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           
-          <img src={Mainlogo} alt="OneGadget Logo" className="w-38 h-10 object-contain" />
+          <img src={Mainlogo} alt="OneGadget Logo" className="w-40 h-10 object-contain" />
         </Link>
 
         {/* Desktop Navigation */}

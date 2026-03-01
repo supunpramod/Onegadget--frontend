@@ -51,7 +51,7 @@ export default function Homepage() {
     <div className="w-full h-screen flex flex-col overflow-hidden bg-[#F9FAFB]">
       <Navbar />
 
-      <div className="flex-1 pt-[80px] overflow-y-auto">
+      <div className="flex-1 pt-[65px] overflow-y-auto">
         <Routes>
           <Route path="/" element={<HomeContainer />} />
           <Route path="/viewcart" element={<ViewCartPage />} />
