@@ -196,7 +196,7 @@ export default function HomeContainer() {
   return (
     <div className="w-full bg-white min-h-screen ">
       {/* Promo Ticker */}
-      <div className="bg-slate-950 py-5 mt-2 ">
+      <div className="bg-slate-950 py-6 mt-2 ">
         <NewAdsTitles speed={35}>
           <div className="flex text-white font-black text-sm uppercase tracking-[0.3em]">
             <span className="mx-12 flex items-center gap-2"> NEW MONITORS IN STOCK NOW</span>
