@@ -176,8 +176,8 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <Link to="/login" className="text-sm font-semibold text-white hover:text-slate-900 px-3">Login</Link>
-                <Link to="/signup" className="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-blue-700 transition-all shadow-md shadow-blue-100">Join Now</Link>
+                <Link to="/login" className="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-blue-700 transition-all shadow-md">Login</Link>
+                <Link to="/signup" className="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-blue-700 transition-all shadow-md">Join Now</Link>
               </div>
             )}
           </div>
