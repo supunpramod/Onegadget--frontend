@@ -118,6 +118,7 @@ import LoginSuccess from "@/components/pages/LoginSuccess";
 import CategoryPage from "@/components/pages/CategoryPage";
 import Bottomfooter from "@/components/bottomfooter";
 import OurBrands from "@/components/Ourbrands";
+import Beingwithus from "@/components/Beingwithus";
 
 export default function Homepage() {
   const [userRole, setUserRole] = useState("customer");
@@ -194,6 +195,7 @@ export default function Homepage() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <Beingwithus></Beingwithus>
 <OurBrands></OurBrands>
         <Bottomfooter />
       </div>

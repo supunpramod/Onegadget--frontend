@@ -61,7 +61,7 @@ export default function OurBrands() {
               <img
                 src={bn.src}
                 alt={bn.alt}
-                className="h-[150px] w-full object-cover md:h-[170px]"
+                className="h-[170px] w-full object-cover sm:h-[190px] md:h-[210px]"
               />
             </div>
           ))}
