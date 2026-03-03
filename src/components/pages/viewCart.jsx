@@ -99,13 +99,13 @@ export default function ViewCart() {
 
   const handleDelete = (productId, productName) => {
     Swal.fire({
-      title: "Remove Item?",
+      title: "Remove Product",
       text: `Do you want to remove "${productName}" from cart?`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#ef4444",
       cancelButtonColor: "#6b7280",
-      confirmButtonText: "Yes, remove",
+      confirmButtonText: " Remove",
     }).then((result) => {
       if (result.isConfirmed) {
         deleteItem(productId);
@@ -157,7 +157,7 @@ export default function ViewCart() {
       `,
       icon: "question",
       showCancelButton: true,
-      confirmButtonColor: "#10b981",
+      confirmButtonColor: "#2E2DAD",
       confirmButtonText: "Secure Checkout",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -188,10 +188,10 @@ export default function ViewCart() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-10 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="bg-amber-500 p-3 rounded-2xl shadow-lg shadow-amber-100">
+            <div className="bg-[#2E2DAD] p-3 rounded-2xl shadow-lg shadow-amber-100">
               <ShoppingBag className="h-6 w-6 text-white" />
             </div>
-            <h1 className="text-3xl font-black text-slate-900">Your Cart</h1>
+            <h1 className="text-3xl font-black text-slate-900"> Cart</h1>
           </div>
           <span className="text-gray-400 font-bold">
             {orderedItems.length} Items
@@ -207,7 +207,7 @@ export default function ViewCart() {
               </div>
             )}
 
-            <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
               {orderedItems.length > 0 ? (
                 <div className="divide-y divide-gray-100">
                   {orderedItems.map((item) => {
@@ -222,7 +222,7 @@ export default function ViewCart() {
                         {/* Image */}
                         {/* Image */}
                         <div className="relative w-28 h-28 flex-shrink-0">
-                          <div className="w-full h-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-gray-50">
+                          <div className="w-full h-full rounded-xl overflow-hidden border border-gray-100 shadow-sm bg-gray-50">
                             {/* Check if images exists and has length. 
        If item.images is a string (legacy), it uses that. 
        If it's an array, it takes the first one.
@@ -263,7 +263,7 @@ export default function ViewCart() {
                             {item.productName}
                           </h3>
                           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-4">
-                            <span className="text-emerald-600 font-black text-lg">
+                            <span className="text-[#2E2DAD] font-bold  text-lg">
                               Rs. {item.lastPrice.toLocaleString()}
                             </span>
                             {isLowStock && (
@@ -313,7 +313,7 @@ export default function ViewCart() {
                               onClick={() =>
                                 handleDelete(item.productId, item.productName)
                               }
-                              className="group p-2 text-gray-300 hover:text-red-500 transition-colors"
+                              className="group p-2 text-black hover:text-red-500 transition-colors"
                             >
                               <Trash2 size={22} />
                             </button>
@@ -409,7 +409,7 @@ export default function ViewCart() {
                   total <= 0 ||
                   orderedItems.some((i) => i.stock <= 0)
                 }
-                className="w-full bg-slate-900 text-white font-black py-5 rounded-[1.5rem] shadow-2xl shadow-slate-300 hover:bg-black transition-all flex items-center justify-center gap-3 uppercase tracking-wider disabled:opacity-30 disabled:grayscale transform active:scale-[0.98]"
+                className="w-full bg-[#2E2DAD] text-white font-black py-5 rounded-lg  shadow-slate-300 hover:bg-black transition-all flex items-center justify-center gap-3 uppercase tracking-wider disabled:opacity-30 disabled:grayscale transform active:scale-[0.98]"
               >
                 {loading ? (
                   "Syncing..."

@@ -117,6 +117,7 @@ import ResetPassword from "@/components/pages/ResetPasswordPage.jsx";
 import LoginSuccess from "@/components/pages/LoginSuccess";
 import CategoryPage from "@/components/pages/CategoryPage";
 import Bottomfooter from "@/components/bottomfooter";
+import OurBrands from "@/components/Ourbrands";
 
 export default function Homepage() {
   const [userRole, setUserRole] = useState("customer");
@@ -193,7 +194,7 @@ export default function Homepage() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-
+<OurBrands></OurBrands>
         <Bottomfooter />
       </div>
 
