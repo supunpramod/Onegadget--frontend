@@ -207,7 +207,7 @@ export default function AdminOrdersCenter() {
                       } ${isNew ? "bg-amber-50/50" : ""}`}
                     >
                       <td className="p-5">
-                        <span className="font-mono font-bold text-blue-600 text-sm">
+                        <span className="font-mono font-bold text-[#2E2DAD] text-sm">
                           #{order.orderId || order._id.slice(-6)}
                         </span>
                       </td>
@@ -244,12 +244,12 @@ export default function AdminOrdersCenter() {
 
                       <td className="p-5">
                         <span
-                          className={`px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-tighter border ${
+                          className={`px-6 py-4 rounded-lg text-base font-black uppercase tracking-tighter border ${
                             order.status === "Delivered"
                               ? "bg-emerald-50 text-emerald-600 border-emerald-100"
                               : order.status === "Cancelled"
                                 ? "bg-rose-50 text-rose-600 border-rose-100"
-                                : "bg-blue-50 text-blue-600 border-blue-100"
+                                : "bg-blue-50 text-[#2E2DAD] border-blue-100"
                           }`}
                         >
                           {order.status}

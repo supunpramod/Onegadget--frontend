@@ -171,7 +171,7 @@ export default function AdsManage() {
         {/* LEFT: INPUTS */}
         <div className="lg:col-span-7 bg-white rounded-[32px] shadow-sm border border-gray-200 p-6 md:p-10 space-y-8">
           <header className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+            <div className="w-12 h-12 bg-[#2E2DAD] rounded-2xl flex items-center justify-center text-white shadow-lg">
               <MdCloudUpload size={24} />
             </div>
             <div>
@@ -230,7 +230,7 @@ export default function AdsManage() {
           <button
             onClick={handleUpload}
             disabled={uploading}
-            className="w-full py-5 rounded-[22px] font-black text-[11px] uppercase tracking-widest text-white bg-gray-900 hover:bg-blue-600 transition-all disabled:opacity-50"
+            className="w-full py-5 rounded-[22px] font-black text-[11px] uppercase tracking-widest text-white bg-[#2E2DAD] hover:bg-blue-600 transition-all disabled:opacity-50"
           >
             {uploading ? "Processing Launch..." : "Publish Campaign"}
           </button>
@@ -242,7 +242,7 @@ export default function AdsManage() {
               
               {/* Preview Badge */}
               <div className="absolute top-5 left-5 z-20">
-                 <div className="bg-blue-600 text-white px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-xl border border-white/20">
+                 <div className="bg-[#2E2DAD] text-white px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-xl border border-white/20">
                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                    <span className="text-[9px] font-black uppercase tracking-wider">{selectedCategoryName} Preview</span>
                  </div>
