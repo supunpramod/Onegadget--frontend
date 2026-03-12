@@ -159,7 +159,7 @@ export default function Navbar() {
             {isAdmin && <NotificationsDropdown />}
 
             {isAdmin && (
-              <Link to="/admin/dashboard" className="bg-transparent text-white px-4 border border-white py-2 rounded-xl text-xs font-semibold hover:bg-blue-600 transition-all shadow-sm flex items-center gap-2">
+              <Link to="/admin/dashboard" className="bg-transparent text-white p-4 border border-2 border-white py-2 rounded-xl text-xs font-semibold hover:bg-blue-600 transition-all shadow-sm flex items-center gap-2">
                 <LayoutDashboard size={25} /> Dashboard
               </Link>
             )}
