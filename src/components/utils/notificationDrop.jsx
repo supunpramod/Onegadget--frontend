@@ -85,7 +85,7 @@ export default function NotificationDrop() {
     <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-all"
+        className="relative p-2 text-white hover:bg-slate-100 hover:text-blue-600 rounded-full transition-all"
       >
         <FiBell size={22} />
         {unreadCount > 0 && (

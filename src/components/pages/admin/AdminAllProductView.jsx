@@ -289,7 +289,7 @@ export default function AdminAllProductView() {
         <div className="flex items-center space-x-3 mt-4 lg:mt-0">
           <button
             onClick={() => navigate("/admin/dashboard/addproducts")}
-            className="flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-500 text-white rounded-lg hover:from-blue-700 hover:to-teal-600 transition"
+            className="flex items-center px-4 py-2 bg-[#2E2DAD] text-white rounded-lg hover:from-blue-700 hover:to-teal-600 transition"
           >
             <FiPlus className="mr-2" />
             Add New Product
@@ -351,11 +351,11 @@ export default function AdminAllProductView() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Brand</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1 ">Brand</label>
             <select
               value={selectedBrand}
               onChange={(e) => setSelectedBrand(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border  border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
               {brands.map((brand) => (
                 <option key={brand} value={brand}>
@@ -394,7 +394,7 @@ export default function AdminAllProductView() {
               </select>
               <button
                 onClick={() => bulkAction === "delete" && handleBulkDelete()}
-                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+                className="px-4 py-2 bg-[#2E2DAD] text-white rounded-lg hover:bg-blue-600 transition"
                 disabled={!bulkAction || selectedProducts.size === 0}
               >
                 Apply
@@ -405,7 +405,7 @@ export default function AdminAllProductView() {
 
         {selectedProducts.size > 0 && (
           <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-between">
-            <div className="text-blue-700 font-medium">{selectedProducts.size} product(s) selected</div>
+            <div className="text-[#2E2DAD] font-medium">{selectedProducts.size} product(s) selected</div>
             <div className="flex space-x-2">
               <button
                 onClick={handleBulkDelete}

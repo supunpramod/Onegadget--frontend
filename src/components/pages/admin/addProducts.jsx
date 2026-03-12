@@ -242,7 +242,7 @@ export default function AddProducts() {
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-teal-500 p-6 text-white">
+          <div className="bg-[#2E2DAD] p-6 text-white">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-3xl font-bold">Add New Product</h1>
@@ -485,7 +485,7 @@ export default function AddProducts() {
                   <button
                     onClick={handleUpload}
                     disabled={uploading}
-                    className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white font-semibold py-4 px-6 rounded-lg transition disabled:opacity-70 flex items-center justify-center"
+                    className="w-full bg-[#2E2DAD] hover:from-blue-700 hover:to-teal-600 text-white font-semibold py-4 px-6 rounded-lg transition disabled:opacity-70 flex items-center justify-center"
                   >
                     {uploading ? (
                       <>

@@ -183,7 +183,7 @@ export default function Notification() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-indigo-600 rounded-2xl shadow-lg shadow-indigo-100 text-white">
+            <div className="p-3 bg-[#2E2DAD] rounded-2xl shadow-lg shadow-indigo-100 text-white">
               <MessageSquare className="w-6 h-6" />
             </div>
             <div>
@@ -205,7 +205,7 @@ export default function Notification() {
               </button>
               <button 
                 onClick={markAllAsRead} 
-                className="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-semibold hover:bg-indigo-600 transition-all flex items-center gap-2 shadow-md"
+                className="px-5 py-2.5 bg-[#2E2DAD] text-white rounded-xl text-sm font-semibold hover:bg-indigo-600 transition-all flex items-center gap-2 shadow-md"
               >
                 <CheckCircle className="w-4 h-4" /> Mark All Read
               </button>
@@ -218,7 +218,7 @@ export default function Notification() {
             <button 
               key={f} 
               onClick={() => setActiveFilter(f)} 
-              className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${activeFilter === f ? 'bg-indigo-600 text-white shadow-md' : 'bg-white text-slate-500 border border-slate-200 hover:border-indigo-300'}`}
+              className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${activeFilter === f ? 'bg-[#2E2DAD] text-white shadow-md' : 'bg-white text-slate-500 border border-slate-200 hover:border-indigo-300'}`}
             >
               {f}
             </button>
@@ -278,7 +278,7 @@ export default function Notification() {
                       <td className="px-6 py-5 text-right">
                         <button 
                           onClick={() => openChatModal(n)} 
-                          className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${!n.isRead ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                          className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${!n.isRead ? 'bg-[#2E2DAD] text-white hover:bg-indigo-700 shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
                         >
                           OPEN CHAT
                         </button>

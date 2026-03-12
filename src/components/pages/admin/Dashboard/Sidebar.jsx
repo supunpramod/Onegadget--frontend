@@ -71,7 +71,7 @@ export default function Sidebar({
 
   const navItemClass = ({ isActive }) =>
     `flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${
-      isActive ? "bg-blue-50 text-blue-700 font-medium" : "hover:bg-blue-50 text-gray-700"
+      isActive ? "bg-blue-50 text-[#2E2DAD] font-medium" : "hover:bg-blue-50 text-gray-700"
     }`;
 
   return (
@@ -80,7 +80,7 @@ export default function Sidebar({
       {/* Logo */}
       <div className="flex items-center justify-between p-6 border-b border-gray-200">
         <Link to="/admin/dashboard" className="flex items-center">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-teal-500 rounded-lg flex items-center justify-center mr-3">
+          <div className="w-10 h-10 bg-[#2E2DAD] rounded-lg flex items-center justify-center mr-3">
             <RxDashboard className="text-white text-xl" />
           </div>
           <span className="text-2xl font-bold text-gray-800">AdminPanel</span>
@@ -90,7 +90,7 @@ export default function Sidebar({
       {/* User Info (Fetch කළ Profile Picture එක මෙහි දිස්වේ) */}
       <div className="p-4 border-b border-gray-200">
         <div className="flex items-center">
-          <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-100 flex items-center justify-center bg-blue-500 mr-3 shadow-sm">
+          <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-100 flex items-center justify-center  mr-3 shadow-sm">
             {currentUser?.profileImage ? (
               <img 
                 src={currentUser.profileImage} 
@@ -108,7 +108,7 @@ export default function Sidebar({
             <div className="font-semibold text-gray-800 truncate text-sm">
               {currentUser?.name || "Admin User"}
             </div>
-            <div className="text-[10px] mt-1 px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full inline-block font-bold uppercase">
+            <div className="text-[10px] mt-1 px-2 py-0.5 bg-blue-100 text-[#2E2DAD] rounded-full inline-block font-bold uppercase">
               {currentUser?.role || "Administrator"}
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function Sidebar({
         </div>
 
         <NavLink to="/admin/dashboard" end className={navItemClass} onClick={closeMobile}>
-          <RxDashboard size={20} className="text-blue-600" />
+          <RxDashboard size={20} className="text-[#2E2DAD]" />
           Overview
         </NavLink>
 
