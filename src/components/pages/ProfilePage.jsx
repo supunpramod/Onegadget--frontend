@@ -272,12 +272,36 @@ export default function ProfilePage() {
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-          <div className="h-40 bg-blue-200"></div>
+          <div className="h-50 bg-blue-200">
+
+
+<div className="  items-center justify-center   ">
+            <div className="flex flex-col  pl-20 pt-4">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <h1 className="text-4xl font-bold text-gray-900">
+                  {user.name} {user.lastname}
+                </h1>
+                {isGoogleUser && (
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 text-xs font-bold uppercase tracking-wider border border-blue-100">
+                    <CheckCircle className="h-3 w-3 mr-1" /> Google Account
+                  </span>
+                )}
+              </div>
+              <p className="text-black flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-black" /> {user.email}
+              </p>
+            </div>
+            </div>
+
+
+
+
+          </div>
 
           <div className="px-6 pb-8 relative">
             <div className="relative -mt-20 mb-6">
               <div className="relative inline-block group">
-                <div className="h-40 w-40 rounded-full border-full border-white shadow-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="h-40 w-40 rounded-full border-3 border-white shadow-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                   {editForm.profileImage ? (
                     <img
                       src={editForm.profileImage}
@@ -325,12 +349,14 @@ export default function ProfilePage() {
               </div>
 
               <div className="absolute right-0 top-0 flex space-x-3">
-                <h1 className="mb-4 text-center p-2  ">You Can Edit Profile Details Here</h1>
+                <div className="mr-5 mt-2">
+                <h1 className="mb-2 text-center p-2  ">You Can Edit Profile Details Here</h1>
+                </div>
                 {!editing ? (
                   
                   <button
                     onClick={() => setEditing(true)}
-                    className="flex items-center px-5 py-2.5 bg-[#2E2DAD]  text-white rounded-xl hover:shadow-lg transition-all duration-200 font-medium shadow-md"
+                    className="flex items-center px-5 py-2 bg-[#2E2DAD]  text-white rounded-xl hover:shadow-lg transition-all duration-200 font-medium shadow-md"
                   >
                     <Edit className="h-5 w-5 mr-2" /> Edit Profile
                   </button>
@@ -360,21 +386,8 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            <div className="mb-8">
-              <div className="flex flex-wrap items-center gap-3 mb-2">
-                <h1 className="text-2xl font-bold text-gray-900">
-                  {user.name} {user.lastname}
-                </h1>
-                {isGoogleUser && (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 text-xs font-bold uppercase tracking-wider border border-blue-100">
-                    <CheckCircle className="h-3 w-3 mr-1" /> Google Account
-                  </span>
-                )}
-              </div>
-              <p className="text-gray-600 flex items-center">
-                <Mail className="h-4 w-4 mr-2 text-gray-400" /> {user.email}
-              </p>
-            </div>
+           
+
 
             {/* Form grid and other fields remain the same as your original code */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
