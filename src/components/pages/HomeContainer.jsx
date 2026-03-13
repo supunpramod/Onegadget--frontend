@@ -25,15 +25,16 @@ const CategoryGrid = ({ categories }) => {
 
   return (
     <section className="py-12 bg-white">
-      <h2 className="text-2xl font-black text-slate-900 mb-8 uppercase tracking-tighter">Categories</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9 border-t border-l border-slate-100">
+      <h2 className="text-3xl font-bold  text-slate-900 mb-8 text-center  ">Categories</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 
+ border-l border-slate-100 gap-5">
         {categories.map((cat) => (
           <Link 
             key={cat._id || cat.slug} 
             to={`/category/${cat.slug}`} 
             className="group flex flex-col items-center p-0 border-r border-b border-slate-100 hover:bg-slate-50 transition-all duration-300"
           >
-            <div className="w-full aspect-square overflow-hidden flex items-center justify-center bg-slate-100">
+            <div className="w-full aspect-square overflow-hidden flex items-center justify-center bg-slate-100 border-rounded rounded-2xl group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all duration-300 ">
               <LazyLoadImage 
                 src={cat.image} 
                 alt={cat.name} 
@@ -43,7 +44,7 @@ const CategoryGrid = ({ categories }) => {
               />
             </div>
             <div className="py-4 px-2 w-full flex items-center justify-center">
-              <span className="text-[10px] font-black text-slate-600 text-center uppercase tracking-widest leading-tight">
+              <span className="text-base font-bold text-slate-600 text-center ">
                 {cat.name}
               </span>
             </div>
@@ -218,11 +219,9 @@ export default function HomeContainer() {
         <CategoryGrid categories={categories} />
 
         <main className="pb-32">
-          <header className="py-24 text-center">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-slate-50 text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase mb-6 border border-slate-100">
-              Handpicked Styles
-            </div>
-            <h2 className="text-6xl md:text-8xl font-black text-slate-950 tracking-tighter mb-6">THE EDIT</h2>
+          <header className="mb-12 text-center">
+            
+            <h2 className="text-3xl font-bold text-slate-950  ">Featuring Products</h2>
           </header>
 
           {/* Products Grid */}
