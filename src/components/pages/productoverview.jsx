@@ -201,8 +201,8 @@ export default function ProductOverview() {
   const hasDiscount = data.price > data.lastPrices;
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-10">
-      <div className="bg-white shadow-sm mb-6 sticky top-0 z-10">
+    <div className="min-h-screen  mt-10">
+      <div className="bg-white  mb-6 sticky top-0 z-10">
         <div className="container mx-auto px-4 py-3">
           <button
             onClick={() => navigate(-1)}
@@ -229,14 +229,14 @@ export default function ProductOverview() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-blue-50 p-4 rounded-2xl flex items-center gap-3 text-blue-700 font-bold text-sm border border-blue-100">
+              <div className="bg-white p-4 rounded-2xl flex items-center gap-3 text-[#2E2DAD] font-bold text-sm border border-blue-100">
                 <div className="bg-blue-100 p-2 rounded-lg">
                   <FiTruck size={20} />
                 </div>
                 <span>Islandwide Delivery</span>
               </div>
-              <div className="bg-green-50 p-4 rounded-2xl flex items-center gap-3 text-green-700 font-bold text-sm border border-green-100">
-                <div className="bg-green-100 p-2 rounded-lg">
+              <div className="bg-white p-4 rounded-2xl flex items-center gap-3 text-[#2E2DAD] font-bold text-sm border border-green-100">
+                <div className="bg-blue-100 p-2 rounded-lg">
                   <FiShield size={20} />
                 </div>
                 <span>Quality Assured</span>
@@ -294,8 +294,8 @@ export default function ProductOverview() {
             <div
               className={`mb-8 p-5 rounded-2xl border-2 transition-colors ${isOutOfStock ? "bg-gray-50 border-gray-100" : "bg-slate-50 border-slate-100"}`}
             >
-              <label className="block text-[10px] font-black text-gray-400 uppercase mb-4 tracking-widest">
-                Select Quantity
+              <label className="block text-base font-black text-black  mb-4 ">
+                 Quantity
               </label>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-5">
@@ -337,7 +337,7 @@ export default function ProductOverview() {
               <button
                 disabled={isOutOfStock || addingToCart}
                 onClick={handleAddToCart}
-                className="flex-1 py-4 px-6 bg-slate-900 text-white rounded-2xl font-black hover:bg-black disabled:bg-gray-200 disabled:text-gray-400 transition-all flex items-center justify-center gap-3 shadow-lg shadow-slate-200 active:scale-95"
+                className=" py-4 px-4 bg-white border-2 border-black text-black rounded-2xl font-black hover:bg-blue-200 disabled:bg-gray-200 disabled:text-gray-400 transition-all flex items-center justify-center gap-3 shadow-lg shadow-slate-200 active:scale-95"
               >
                 <FiShoppingCart size={20} />{" "}
                 {addingToCart ? "Adding..." : "Add to Cart"}
@@ -345,9 +345,9 @@ export default function ProductOverview() {
               <button
                 disabled={isOutOfStock}
                 onClick={handleBuyNow}
-                className="flex-1 py-4 px-6 bg-green-600 text-white rounded-2xl font-black hover:bg-green-700 disabled:bg-gray-100 disabled:text-gray-300 transition-all shadow-lg shadow-green-100 active:scale-95"
+                className=" py-4 px-6 bg-[#2E2DAD] text-white rounded-2xl font-black hover:bg-green-700 disabled:bg-gray-100 disabled:text-gray-300 transition-all shadow-lg shadow-green-100 active:scale-95"
               >
-                {isOutOfStock ? "Out of Stock" : "Buy It Now"}
+                {isOutOfStock ? "Out of Stock" : "Buy Now"}
               </button>
             </div>
 

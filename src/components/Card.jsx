@@ -97,7 +97,7 @@ export default function Card({
               className={`w-full font-bold py-3 rounded-xl transition-all duration-300 shadow-md ${
                 isOutOfStock 
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed" 
-                : "bg-slate-900 text-white hover:bg-black hover:shadow-xl active:scale-95"
+                : "bg-[#2E2DAD] text-white hover:bg-black hover:shadow-xl active:scale-95"
               }`}
             >
               {isOutOfStock ? "Out of Stock" : "View Product"}
