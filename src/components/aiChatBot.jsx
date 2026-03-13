@@ -23,7 +23,7 @@ const MessageBubble = memo(({ msg }) => {
     >
       <div
         className={`max-w-[85%] px-4 py-2.5 text-sm shadow-sm leading-relaxed ${isUser
-          ? "bg-slate-900 text-white rounded-t-2xl rounded-bl-2xl"
+          ? "bg-[#2E2DAD] text-white rounded-t-2xl rounded-bl-2xl"
           : "bg-white border rounded-t-2xl rounded-br-2xl text-slate-700"
           }`}
         style={{ fontFamily: "inherit" }} // සිංහල අකුරු නිවැරදිව පෙන්වීමට
@@ -212,16 +212,17 @@ export default function ChatBot() {
     <div className="fixed bottom-6 right-6 z-[1000] font-sans antialiased">
       <button
         onClick={() => (token ? setIsOpen(!isOpen) : navigate("/login"))}
-        className="w-14 h-14 bg-slate-900 text-white rounded-full shadow-2xl flex items-center justify-center text-xl hover:scale-105 active:scale-95 transition-all"
+        className="w-14 h-14 bg-[#2E2DAD] text-white rounded-full border border-2 border-white shadow-2xl flex items-center justify-center text-xl hover:scale-105 active:scale-95 transition-all mr-10"
       >
         {isOpen ? "✕" : "💬"}
       </button>
 
       {isOpen && (
         <div className="absolute bottom-20 right-0 w-[350px] h-[550px] bg-white rounded-[25px] flex flex-col shadow-2xl overflow-hidden border border-slate-100 ring-1 ring-black/5">
-          <header className="p-4 bg-slate-900 text-white flex justify-between items-center shrink-0">
+          <header className="p-4 bg-[#2E2DAD] text-white flex justify-between items-center shrink-0">
             <div>
-              <h3 className="font-bold text-sm tracking-wide">Assistant</h3>
+              <h3 className="font-bold text-small tracking-wide">Customer Support</h3>
+              <h3 className=" text-sm tracking-wide">Customer Service Super Chat</h3>
               <div className="flex items-center gap-2 mt-1.5">
                 <button
                   onClick={() => setSelectedLang("si-LK")}
@@ -288,7 +289,12 @@ export default function ChatBot() {
                 className="flex-1 bg-transparent outline-none text-sm py-3 text-slate-700 placeholder:text-slate-400"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder={isListening ? (selectedLang === "si-LK" ? "අසා සිටිමි..." : "Listening...") : "පණිවිඩයක් ලියන්න..."}
+                // placeholder={isListening ? (selectedLang === "si-LK" ? "අසා සිටිමි..." : "Listening...") : "පණිවිඩයක් ලියන්න..."}
+                placeholder={
+  isListening
+    ? (selectedLang === "si-LK" ? "අසා සිටිමි..." : "Listening...")
+    : (selectedLang === "si-LK" ? "පණිවිඩයක් ලියන්න..." : "Type Your Message Here...")
+}
                 disabled={loading}
               />
               <button
