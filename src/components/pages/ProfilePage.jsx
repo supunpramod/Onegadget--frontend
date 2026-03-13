@@ -265,19 +265,19 @@ export default function ProfilePage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8 text-center md:text-left">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold text-[#2E2DAD]   ">
             Your Profile
           </h1>
           <p className="text-gray-600 mt-2">Manage your personal information</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-          <div className="h-40 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600"></div>
+          <div className="h-40 bg-blue-200"></div>
 
           <div className="px-6 pb-8 relative">
             <div className="relative -mt-20 mb-6">
               <div className="relative inline-block group">
-                <div className="h-40 w-40 rounded-2xl border-4 border-white shadow-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="h-40 w-40 rounded-full border-full border-white shadow-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                   {editForm.profileImage ? (
                     <img
                       src={editForm.profileImage}
@@ -308,7 +308,7 @@ export default function ProfilePage() {
                 {editForm.profileImage && (
                   <button
                     onClick={handleDeletePhoto}
-                    className="absolute -bottom-2 -left-2 p-3 bg-red-500 text-white rounded-full shadow-xl opacity-0 group-hover:opacity-100 hover:bg-red-600 hover:scale-105 transition-all duration-200 z-10"
+                    className="absolute -bottom-2 -left-2 p-3 bg-red-500 text-white rounded-full shadow-xl  group-hover:opacity-100 hover:bg-red-600 hover:scale-105 transition-all duration-200 z-10"
                     disabled={uploading}
                   >
                     <Trash2 size={20} />
@@ -325,19 +325,22 @@ export default function ProfilePage() {
               </div>
 
               <div className="absolute right-0 top-0 flex space-x-3">
+                <h1 className="mb-4 text-center p-2  ">You Can Edit Profile Details Here</h1>
                 {!editing ? (
+                  
                   <button
                     onClick={() => setEditing(true)}
-                    className="flex items-center px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg transition-all duration-200 font-medium shadow-md"
+                    className="flex items-center px-5 py-2.5 bg-[#2E2DAD]  text-white rounded-xl hover:shadow-lg transition-all duration-200 font-medium shadow-md"
                   >
                     <Edit className="h-5 w-5 mr-2" /> Edit Profile
                   </button>
+                  
                 ) : (
                   <>
                     <button
                       onClick={handleSaveProfile}
                       disabled={loading}
-                      className="flex items-center px-5 py-2.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl hover:shadow-lg transition-all duration-200 font-medium shadow-md disabled:opacity-50"
+                      className="flex items-center px-5 py-2.5 bg-[#2E2DAD]  text-white rounded-xl hover:shadow-lg transition-all duration-200 font-medium shadow-md disabled:opacity-50"
                     >
                       {loading ? (
                         <Loader2 className="h-5 w-5 mr-2 animate-spin" />
@@ -348,7 +351,7 @@ export default function ProfilePage() {
                     </button>
                     <button
                       onClick={() => setEditing(false)}
-                      className="flex items-center px-5 py-2.5 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-xl hover:bg-gray-300 transition-all duration-200 font-medium"
+                      className="flex items-center border-2 border-black px-5 py-2.5 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-xl hover:bg-gray-300 transition-all duration-200 font-medium"
                     >
                       <X className="h-5 w-5 mr-2" /> Cancel
                     </button>
@@ -470,7 +473,9 @@ export default function ProfilePage() {
                 >
                   <Lock className="h-5 w-5 inline mr-2" /> Change Password
                 </button>
+                
               )}
+              <h1 className="mt-2">Secured by Google Security.</h1>
             </div>
           </div>
         </div>
